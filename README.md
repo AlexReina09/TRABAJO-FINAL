@@ -1,6 +1,46 @@
 # TRABAJO-FINAL
-TRABAJO FINAL
-INSTALCION DE KUBECTL, MINIKUBE Y JUEGO SUPERTUXKART EN KALI LINUX
+## INSTALACIÓN Y CONFIGURACIÓN DEL CHATBOT INTELIGENTE
+### Inicialización del Entorno y Control de Contingencia (Fallback)
+Al arrancar la aplicación, el script gestiona las librerías esenciales (Flask para el servidor web y requests para las transmisiones HTTP). Un punto clave en el diseño del código es la resiliencia del sistema:
+
+Modo API Externa: El chatbot intenta capturar de forma segura la API Key de Anthropic desde las variables de entorno para conectarse con el modelo de lenguaje natural Claude.
+
+Modo Local (Respuesta Fallback): Si el sistema se despliega en un entorno offline o sin credenciales, se programo una función de contingencia basada en un diccionario de mapeo tecnológico en Python. Esta analiza mediante procesamiento de texto básico las palabras clave del usuario (como Docker, Kubernetes o nmap) y retorna descripciones técnicas precisas de inmediato, garantizando que el chatbot nunca deje de responder.
+
+<img width="702" height="401" alt="image" src="https://github.com/user-attachments/assets/7d2fe3c8-1cb7-4716-b472-75f47edcaff5" />
+
+### Base de Conocimientos Específica (System Prompt)
+Para asegurar que el modelo se comporte estrictamente como el asistente oficial de nuestro proyecto, se inyecto un System Prompt estructurado. En esta base de conocimientos se definio al chatbot el contexto exacto de nuestra arquitectura de tres contenedores (YOLO, Parrot OS y el propio Chatbot) y se le proporciono la documentación conceptual de cada herramienta. Con esto se logro acotar las respuestas de la IA para que sean concisas, didácticas y enfocadas 100% en los requerimientos académicos de la entrega.
+
+<img width="1365" height="639" alt="image" src="https://github.com/user-attachments/assets/a82c99cd-b8b0-4618-9bb1-2c09580110f0" />
+
+### Arquitectura de Endpoints y Rutas del Servidor
+El servidor de Flask expone tres rutas principales orientadas al control del flujo de datos:
+
+Ruta Raíz (/): Renderiza el archivo index.html de la interfaz gráfica, la cual cuenta con un diseño cyber-tech optimizado y hojas de estilo que integran la Web Speech API del navegador para habilitar la lectura por voz.
+
+Ruta de Mensajería (/chat): Procesa las consultas de texto plano enviadas por el usuario, manteniendo un buffer de los últimos 10 mensajes para preservar el hilo conversacional (historial) antes de solicitar la inferencia lingüística.
+
+### Integración Concurrente y Redirección de Puertos (/detectar)
+Esta es la sección más crítica del desarrollo, ya que consolida la comunicación interactiva entre microservicios (Chatbot y YOLO). Para evitar colisiones de red en entornos locales (el error Address already in use), se tomo la decisión arquitectónica de aislar los puertos, asignando el puerto 5001 para el Chatbot y el puerto 5000 para el servidor de YOLO.
+
+El flujo de integración síncrona que se programo funciona de la siguiente manera:
+
+El usuario carga la imagen de un logotipo tecnológico desde la interfaz del Chatbot (Puerto 5001).
+
+El endpoint /detectar procesa el archivo y, mediante una petición HTTP POST utilizando la librería requests, actúa como un puente de red enviando los bytes de la imagen a la dirección local de YOLO ([http://127.0.0.1:5000/api/clasificar](http://127.0.0.1:5000/api/clasificar)).
+
+El script de YOLO ejecuta la inferencia con su modelo entrenado y me retorna un objeto estructurado en formato JSON con la etiqueta de la herramienta identificada y su porcentaje de confianza.
+
+El código recibe este veredicto, genera de forma automatizada una consulta aclaratoria sobre esa tecnología y le solicita al motor de IA que formule una explicación educativa en tiempo real para desplegarla al usuario en la web junto con el porcentaje de acierto.
+
+### Arranque y Despliegue del Servicio
+Finalmente, el bloque principal del programa inicializa el demonio de Flask exponiendo la aplicación en la dirección 0.0.0.0 para permitir conexiones desde cualquier interfaz de red del host, fijando de manera estricta el puerto de escucha en el 5001 y activando el modo debug para agilizar el monitoreo de errores en tiempo de desarrollo.
+
+<img width="1365" height="720" alt="image" src="https://github.com/user-attachments/assets/d2c2aff8-bffd-448f-ac37-356eabff9c70" />
+<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/280e6ae0-96b5-4907-b7f9-da3b2027b0bd" />
+
+## INSTALCION DE KUBECTL, MINIKUBE Y JUEGO SUPERTUXKART EN KALI LINUX
 
 Se realiza la actulización y descarga de paquetes nuevo para el kali linux
 
