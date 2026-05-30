@@ -460,41 +460,118 @@ proyecto_final/
 | Anthropic Claude (opcional) | Motor de lenguaje natural del chatbot |
 
 
+#   CRACION DE IMÁGENES EN ROBOFLOW PARA EL LOGO DE DOCKER  
+ 
+#   https://roboflow.com/
+
+1.	Usamos la opción en la página web de aumento de datos usando modificaciones de una cantidad pequeñas de imágenes.
+
+2.	Generamos una nueva versión y la vamos guardando.
 
 
+3.	Preprocesamiento y aumento de datos, cada argumentación crea nuevas variantes de tus imágenes.
+
+4.	Aumentando la cantidad de imágenes de 10 en 10 hasta completar las 100 imágenes solicitadas.
 
 
+5.	Generar dataset, Roboflow empezará a crear automáticamente las imágenes nuevas.
+
+6.	Entrenar modelo para descargar el dataset d eimagenes.
 
 
+7.	Exportadas en formato para YOLOv8.
+
+                     #  ADMINISTRADOR
+                     Debian Linux
+                     IP: 192.168.51.10
+                     Grafana + Wireshark                     
+                     Puerto: Gi0/0
 
 
+<img width="1163" height="654" alt="image" src="https://github.com/user-attachments/assets/84719df4-c5fa-4492-a5c5-9903409e961e" />
 
 
+<img width="1135" height="639" alt="image" src="https://github.com/user-attachments/assets/37d54d73-a49f-463f-b5ec-ccf02ddbc995" />
 
 
+<img width="1115" height="626" alt="image" src="https://github.com/user-attachments/assets/8bf30c96-1e89-4b61-8d4e-3968c83385ea" />
 
 
+<img width="1124" height="632" alt="image" src="https://github.com/user-attachments/assets/8f52983f-dbff-4895-a56f-56657ceb5e58" />
 
 
+# CONFIGURACIÓN E INSTALACIÓN DE DEBÍAN 13.5
+
+#   Software free VirtualBox para instalación de Debian 13.5
+
+#   Configuración Inicial:
 
 
+<img width="1080" height="572" alt="image" src="https://github.com/user-attachments/assets/87443419-0885-4f04-9e31-86dec67394f0" />
 
 
+<img width="1087" height="611" alt="image" src="https://github.com/user-attachments/assets/1c85a9e3-598a-444a-ad78-749a58552d45" />
 
 
+<img width="1130" height="593" alt="image" src="https://github.com/user-attachments/assets/fec748cd-8cbe-42ef-93c3-d8d9d9fc9e09" />
 
 
+#   CONFIGURACIÓN E INSTALACIÓN DE WIRESHARK EN DEBIAN
 
 
+<img width="1087" height="573" alt="image" src="https://github.com/user-attachments/assets/22d872c2-0807-44c4-ac29-c809480e4d3f" />
 
 
+<img width="997" height="796" alt="image" src="https://github.com/user-attachments/assets/f41f9502-0802-4e81-8149-995bfec4b1cb" />
 
 
+<img width="1075" height="458" alt="image" src="https://github.com/user-attachments/assets/d32efaa7-7e0f-4c1c-b052-ae6d7d69a761" />
 
 
+<img width="1089" height="572" alt="image" src="https://github.com/user-attachments/assets/b9c1af39-1c46-4462-b07e-accf10953aee" />
 
 
+<img width="1129" height="598" alt="image" src="https://github.com/user-attachments/assets/9c635600-b405-419b-9b70-0d69c192dc88" />
 
 
+#   CONFIGURACIÓN E INSTALACIÓN DE GRAFANA DASHBOARD EN DEBIAN
 
+
+<img width="1097" height="565" alt="image" src="https://github.com/user-attachments/assets/da099d39-1e32-4391-9939-50167b3a9290" />
+
+
+<img width="1117" height="591" alt="image" src="https://github.com/user-attachments/assets/34fd79d7-f1b8-479b-ba1e-42a8cdfc19d2" />
+
+
+<img width="1098" height="652" alt="image" src="https://github.com/user-attachments/assets/c45420f3-5ae5-4935-b97a-99d221617bc7" />
+
+
+<img width="1143" height="607" alt="image" src="https://github.com/user-attachments/assets/1bca15bd-c50e-4496-a611-199d13eb0abc" />
+
+
+<img width="1119" height="607" alt="image" src="https://github.com/user-attachments/assets/1f3186a1-f738-4ae2-8b38-b9aaf1216f33" />
+
+
+<img width="1097" height="589" alt="image" src="https://github.com/user-attachments/assets/9edb8ad8-0f14-4c1c-b031-88dd69603173" />
+
+
+#   CONFIGURACIÓN DE IP ESTÁTICA EN DEBIAN 13.
+#   Ejecutamos la consola como administradores en debian en virtualbox:
+ 
+#   En VirtualBox configura el adaptador de red de la VM Debian así:
+#   Configuración de comandos en Debian IP estática:
+
+    auto enp0s3
+    iface enp0s3 inet static    
+    address 192.168.51.10    
+    netmask 255.255.255.0   
+    gateway 192.168.51.1   
+    dns-nameservers 8.8.8.8
+
+    sudo systemctl restart networking
+
+    ip aping 192.168.51.1
+
+
+<img width="1101" height="535" alt="image" src="https://github.com/user-attachments/assets/d7279f00-e978-4ea8-9fdf-181d350efb10" />
 
