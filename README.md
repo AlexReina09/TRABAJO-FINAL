@@ -4,6 +4,10 @@
 |--------|--------------|------------|
 | 2026 | Fundación Universitaria Compensar | Diego Alejandro Barragán Vargas |
 
+| Integrantes | correo | 
+|--------|--------------|
+| Lina Marcela Contreras Sanabria | lmarcelacontreras@ucompensar.edu.co |
+
 ## ¿De qué trata este proyecto?
 
 El proyecto simula una infraestructura de red empresarial real dividida en dos ramas tecnológicas, administradas desde un nodo central con herramientas de monitoreo y seguridad.
