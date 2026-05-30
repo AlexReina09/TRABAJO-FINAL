@@ -1,4 +1,76 @@
-# TRABAJO-FINAL
+║        FUNDACIÓN UNIVERSITARIA COMPENSAR                     ║
+║        Facultad de Ingeniería — Telecomunicaciones           ║
+
+| Año | Institución | Docente |
+|--------|--------------|------------|
+| 2026 | Fundación Universitaria Compensar | Diego Alejandro Barragán Vargas |
+
+## ¿De qué trata este proyecto?
+
+El proyecto simula una infraestructura de red empresarial real dividida en dos ramas tecnológicas, administradas desde un nodo central con herramientas de monitoreo y seguridad.
+
+La idea nació de un escenario real: una red mal configurada puede tumbar simultáneamente una cirugía remota, una final de videojuegos y una reunión corporativa. Este proyecto demuestra cómo diseñar redes que **no colapsan**.
+
+---
+
+## Arquitectura General
+
+```
+                    ┌─────────────────┐
+                    │  ADMINISTRADOR  │
+                    │  Debian Linux   │
+                    │  192.168.51.10  │
+                    │  Grafana+Wiresh │
+                    └────────┬────────┘
+                             │ Gi0/0
+                    ┌────────▼────────┐
+                    │  ROUTER CISCO   │
+                    │     1941        │
+                    │  ACL + QoS      │
+                    │  DHCP Server    │
+                    └────────┬────────┘
+                             │ Gi0/1 (Trunk)
+                    ┌────────▼────────┐
+                    │ SWITCH CATALYST │
+                    │  VLAN 20 | 30   │
+                    └────┬───────┬────┘
+                         │       │
+               ┌─────────▼─┐ ┌───▼──────────┐
+               │   DOCKER  │ │  KUBERNETES  │
+               │192.168.50 │ │ 192.168.49   │
+               │           │ │              │
+               │ 🐳 YOLO   │ │ ☸️ Minikube  │
+               │ 🤖 Chatbot│ │ 🎮 STuxKart  │
+               └───────────┘ └──────────────┘
+```
+
+### Segmentación de red
+
+| VLAN | Red | Dispositivos |
+|------|-----|-------------|
+| VLAN 10 | 192.168.51.0/24 | Administrador — Debian + Grafana + Wireshark |
+| VLAN 20 | 192.168.50.0/24 | Docker — YOLO + Chatbot |
+| VLAN 30 | 192.168.49.0/24 | Kubernetes — SuperTuxKart + Agones |
+
+---
+
+## Rama 1 — YOLO + Chatbot: Detección Inteligente de Logos e Integración de Microservicios en Docker
+
+### ¿Qué hace?
+
+Se desplegaron dos contenedores que trabajan juntos para identificar herramientas tecnológicas y explicarlas en tiempo real.
+
+
+## Rama 2 — SuperTuxKart en Kubernetes con Agones
+
+### ¿Qué hace?
+
+Se desplegó un servidor dedicado del juego **SuperTuxKart** (clon open-source de Mario Kart) orquestado con **Minikube + Agones** en Kali Linux.
+
+**¿Por qué SuperTuxKart?**
+El tráfico UDP que genera el juego compite contra el tráfico de video de YOLO en la red, lo que permite demostrar y medir el funcionamiento de las políticas **QoS** configuradas en el router.
+
+
 ## INSTALACIÓN Y CONFIGURACIÓN DEL CHATBOT INTELIGENTE
 ### Inicialización del Entorno y Control de Contingencia (Fallback)
 Al arrancar la aplicación, el script gestiona las librerías esenciales (Flask para el servidor web y requests para las transmisiones HTTP). Un punto clave en el diseño del código es la resiliencia del sistema:
