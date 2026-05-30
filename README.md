@@ -1,5 +1,4 @@
-║        FUNDACIÓN UNIVERSITARIA COMPENSAR                     ║
-║        Facultad de Ingeniería — Telecomunicaciones           ║
+#        FUNDACIÓN UNIVERSITARIA COMPENSAR  -  Facultad de Ingeniería — Telecomunicaciones           
 
 | Año | Institución | Docente |
 |--------|--------------|------------|
@@ -70,6 +69,8 @@ Se desplegó un servidor dedicado del juego **SuperTuxKart** (clon open-source d
 **¿Por qué SuperTuxKart?**
 El tráfico UDP que genera el juego compite contra el tráfico de video de YOLO en la red, lo que permite demostrar y medir el funcionamiento de las políticas **QoS** configuradas en el router.
 
+
+---
 
 ## INSTALACIÓN Y CONFIGURACIÓN DEL CHATBOT INTELIGENTE
 ### Inicialización del Entorno y Control de Contingencia (Fallback)
