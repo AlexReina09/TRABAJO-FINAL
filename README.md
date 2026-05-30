@@ -6,6 +6,13 @@
 
 | Integrantes | correo | 
 |--------|--------------|
+
+| Integrantes | correo | 
+|--------|--------------|
+| Alexander Reina | alexanderreina@ucompensar.edu.co |
+| Brayan Ivan Ribon Quintero | bribon@ucompensar.edu.co |
+| Edwar Roberto Martinez Pinto | ermartinez@ucompensar.edu.co |
+| Jeimy Lorena Nino Correa | jlorenanino@ucompensar.edu.co |
 | Lina Marcela Contreras Sanabria | lmarcelacontreras@ucompensar.edu.co |
 
 ## ¿De qué trata este proyecto?
